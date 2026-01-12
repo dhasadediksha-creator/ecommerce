@@ -19,12 +19,19 @@
 
     <div class="logo">Ecommerce</div>
     <nav>
+        <div class="part1">
         <a href="Home.html">Home</a>
         <a href="About.html">About Us</a>
-        <a href="Shop.html" class="active">Shop</a>
+        <a href="Shop.html"class="active">Shop</a>
         <a href="Contact.html">Contact Us</a>
+        </div>
+        <div class="part2">
+          <div class="style">
         <a href="Signin.html">Sign In</a>
         <a href="Signup.html">Sign Up</a>
+        </div>
+        <a href="cart.html"><i class="bi bi-cart4"></i></a>
+        </div>
     </nav>
 </header>
 
@@ -40,39 +47,7 @@
 
 
 <h1 class="heading3">Shop Page</h1>
-<!-- 
-<div class="form-box">
-  <input type="text" id="title" placeholder="Title">
-  <input type="text" id="description" placeholder="Description">
-  <input type="number" id="price" placeholder="Price">
-  <input type="text" id="color" placeholder="Color">
-  <input type="number" id="rating" placeholder="Rating (1-5)">
-  <input type="file" id="imageInput">
 
-  <button class="add-btn" onclick="addProduct()">Add</button>
-</div>
-
-
-<table>
-  <thead>
-    <tr>
-      <th>Image</th>
-      <th>Title</th>
-      <th>Description</th>
-      <th>Price</th>
-      <th>Color</th>
-      <th>Rating</th>
-      <th>Action</th>
-    </tr>
-  </thead>
-  <tbody id="productTable"></tbody>
-</table>
-
-
-<div style="text-align:center;margin:30px; padding-left: 1200px;">
-  <button class="cart-btn" onclick="addToCart()">Add To Cart</button>
-</div>
- -->
 
 <!-- ADD FORM -->
 <div class="form-box">
@@ -90,13 +65,16 @@
 
 <!-- CARDS CONTAINER -->
 <div class="cards-container" id="productCards"></div>
-
-<!-- ADD TO CART -->
+<!-- 
 <div style="text-align:center;margin:20px;">
-  <button class="cart-btn" onclick="addToCart()">Add To Cart</button>
+  <button onclick='addToCart(${JSON.stringify(p)})' >Add To Cart</button>
+</div> -->
+
+
+<div class="cart-section" id="cartSection" style="display:none;">
+  <h1>Your Cart</h1>
+  <div id="cartItems"></div>
 </div>
-
-
 
 
 

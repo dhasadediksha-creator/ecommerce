@@ -1,0 +1,62 @@
+@import "./global.css";
+/* General body */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    /* background-color: #f0f4f8;   */
+      background-color: #f3f6f9;
+
+}
+
+/* Header */
+header {
+    background-color: #e0f7fa;  /* light blue */
+    display: flex;
+    align-items: center;
+    padding: 10px 40px;
+    margin: 0;
+}
+
+/* Logo */
+.logo {
+    font-size: 30px;
+    font-weight: bold;
+    color: #00796b;  /* dark teal */
+    
+}
+
+header .image img {
+    height: 80px; /* logo height */
+    width: auto;  /* maintain aspect ratio */
+    display: block;
+}
+
+/* Navbar */
+nav {
+    display: flex;
+    gap: 15px;
+    margin-left: 500px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #00796b;  /* dark teal */
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+nav a.active, nav a:hover {
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.part1{
+    justify-content: center;
+    padding-right: 100px;
+
+}
+
+
+
+  

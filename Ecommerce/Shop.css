@@ -31,13 +31,17 @@ header .image img {
 
 
 
+.part1{
+    justify-content: center;
+        padding-right: 100px;
 
+}
 
 /* Navbar */
 nav {
     display: flex;
     gap: 15px;
-    margin-left: 600px;
+    margin-left: 500px;
 
 }
 
@@ -105,7 +109,7 @@ button:hover {
 /* Banner */
 .page-title {
   height: 260px;
-  background-image: url("./image-file2/png-image3.jpeg"); /* tuzi image */
+  background-image: url("./image-file/photo.jpg2.jpg"); /* tuzi image */
   background-size: cover;
   background-position: center;
   display: flex;
@@ -118,19 +122,18 @@ button:hover {
   content: "";
   position: absolute;
   inset: 0;
-}
+} 
 
  .page-title {
   position: relative;
   font-size: 48px;
   letter-spacing: 2px;
-  color: #fff;
-}
+  color: rgb(33, 85, 127);
+} 
 
 
 .page-title{
     text-align:center;
-    margin:30px 0;
     font-size:32px;
 }
 
@@ -251,156 +254,6 @@ body{
   color:#333;
 }
 
-/* ===== ADD FORM ===== */
-.form-box{
-  max-width:600px;
-  margin:40px auto;
-  background:#fff;
-  padding:10px;
-  padding-left: 180px;
-  border-radius:12px;
-  box-shadow:0 8px 20px rgba(0,0,0,0.08);
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:15px;
-}
-
-.form-box input{
-  padding:10px;
-  border:1px solid #ccc;
-  border-radius:6px;
-  outline:none;
-  font-size:14px;
-}
-
-.form-box input:focus{
-  border-color:#20cd5d;
-}
-
-.form-box input[type="file"]{
-  grid-column:1 / -1;
-}
-
-.add-btn{
-  grid-column:1 / -1;
-  padding:10px;
-  background:#39de80;
-  color:#fff;
-  border:none;
-  border-radius:8px;
-  font-size:15px;
-  cursor:pointer;
-  transition:0.3s;
-}
-
-.add-btn:hover{
-  background:#4338ca;
-}
-
-/* ===== HEADING ===== */
-h2{
-  text-align:center;
-  margin:20px 0;
-}
-
-/* ===== CARDS CONTAINER ===== */
-.cards-container{
-  max-width:1200px;
-  margin:30px auto;
-  padding:0 20px;
-  display:grid;
-  grid-template-columns:repeat(auto-fill,minmax(240px,1fr));
-  gap:25px;
-}
-
-/* ===== PRODUCT CARD ===== */
-.product-card{
-  background:#fff;
-  border-radius:14px;
-  overflow:hidden;
-  box-shadow:0 10px 25px rgba(0,0,0,0.08);
-  transition:0.3s;
-}
-
-.product-card:hover{
-  transform:translateY(-5px);
-}
-
-/* IMAGE */
-.product-card img{
-  width:100%;
-  height:180px;
-  object-fit:cover;
-}
-
-/* CARD BODY */
-.card-body{
-  padding:15px;
-}
-
-.card-body h4{
-  font-size:16px;
-  margin-bottom:6px;
-}
-
-.card-body p{
-  font-size:13px;
-  margin:4px 0;
-  color:#555;
-}
-
-.card-body b{
-  color:#111;
-}
-
-/* ===== CARD ACTIONS ===== */
-.card-actions{
-  display:flex;
-  justify-content:space-between;
-  padding:12px 15px;
-  border-top:1px solid #eee;
-}
-
-.card-actions button{
-  padding:6px 12px;
-  font-size:12px;
-  border:none;
-  border-radius:6px;
-  cursor:pointer;
-}
-
-.card-actions button:first-child{
-  background:#22c55e;
-  color:#fff;
-}
-
-.card-actions button:last-child{
-  background:#ef4444;
-  color:#fff;
-}
-
-/* ===== ADD TO CART BUTTON ===== */
-.cart-btn{
-  padding:10px 22px;
-  font-size:14px;
-  background:#0ea5e9;
-  color:#fff;
-  border:none;
-  border-radius:20px;
-  cursor:pointer;
-  transition:0.3s;
-}
-
-.cart-btn:hover{
-  background:#0284c7;
-}
-
-/* ===== RESPONSIVE ===== */
-@media(max-width:600px){
-  .form-box{
-    grid-template-columns:1fr;
-  }
-}
 
 
 
@@ -461,4 +314,185 @@ h2{
   font-size: 22px;
   color: #fff;
   margin-right: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.form-box {
+    width: 350px;
+    margin: 40px auto;
+    padding: 25px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.form-box input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 14px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+.form-box input:focus {
+    outline: none;
+    border-color: #4caf50;
+}
+
+/* FILE INPUT */
+.form-box input[type="file"] {
+    padding: 8px;
+    background: #f9f9f9;
+}
+
+/* ADD BUTTON */
+.add-btn {
+    width: 100%;
+    background: #4caf50;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+
+/* HEADING */
+h2 {
+    text-align: center;
+    margin-top: 30px;
+}
+
+/* ADD TO CART BUTTON */
+.cart-btn {
+    background: #c04b7d;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.cart-btn:hover {
+    background: #a83d6a;
+}
+
+/* PRODUCT CARDS CONTAINER */
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    padding: 30px;
+}
+
+
+
+
+
+
+
+
+/* ===== CART SECTION ===== */
+.cart-section {
+    width: 100%;
+    max-width: 500px;       /* छोटा width */
+    margin: 20px auto;      /* center horizontally */
+    padding: 15px;          /* कमी padding */
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    display: none;          /* hidden by default */
+}
+
+.cart-section h1 {
+    text-align: center;
+    margin-bottom: 15px;
+    font-family: 'Arial', sans-serif;
+    font-size: 22px;        /* कमी font size */
+    color: #333;
+}
+
+/* ===== CART ITEMS ===== */
+.cart-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    padding: 10px;           /* कमी padding */
+    margin-bottom: 12px;     /* कमी spacing */
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.cart-item img {
+    width: 70px;             /* छोटा image */
+    height: auto;
+    border-radius: 6px;
+    object-fit: cover;
+}
+
+.cart-item .info {
+    flex: 1;
+    margin-left: 10px;
+}
+
+.cart-item .info h3 {
+    margin: 0 0 3px 0;
+    font-size: 16px;         /* छोटा font */
+    color: #222;
+}
+
+.cart-item .info p {
+    margin: 2px 0;
+    font-size: 12px;         /* छोटा font */
+    color: #555;
+}
+
+/* ===== ADD TO CART BUTTON ===== */
+.cart-item button {
+    padding: 6px 12px;       /* छोटा button */
+    background: #ff6b6b;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 12px;         /* छोटा text */
+    cursor: pointer;
+}
+
+.cart-item button:hover {
+    background: #ff4c4c;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 480px) {
+    .cart-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .cart-item img {
+        margin-bottom: 8px;
+    }
+
+    .cart-item .info {
+        margin-left: 0;
+    }
+
+    .cart-item button {
+        width: 100%;
+        margin-top: 6px;
+    }
 }
