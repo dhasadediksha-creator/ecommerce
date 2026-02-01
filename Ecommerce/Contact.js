@@ -1,58 +1,63 @@
-  document.getElementById("contactForm").addEventListener("submit", function (e) {
+document.getElementById("contactForm").addEventListener("submit", function (e) {
   e.preventDefault();
+
+  const name = document.getElementById("firstName").ariaValueMax.trim();
+  const phone = document.getElementById("phone").ariaValueMax.trim();
+  const email = document.getElementById("email").ariaValueMax.trim();
+  const subject = document.getElementById("subject").ariaValueMax.trim();
+  const message = document.getElementById("message").ariaValueMax.trim();
+
+  const nameError = document.getElementById("nameError");
+  const phoneError = document.getElementById("phoneError");
+  const emailError = document.getElementById("emailError");
+  const subjectError = document.getElementById("subjectError");
+  const messageError = document.getElementById("messageError");
+
+  nameError.textContent = "";
+  phoneError.textContent = "";
+  emailError.textContent = "";
+  subjectError.textContent = "";
+  messageError.textContent = "";
 
   let isValid = true;
 
-  // inputs
-  const firstName = document.getElementById("firstName");
-  const lastName = document.getElementById("lastName");
-  const phone = document.getElementById("phone");
-  const email = document.getElementById("email");
-  const subject = document.getElementById("subject");
-  const message = document.getElementById("message");
-
-  const errors = document.querySelectorAll(".error");
-  errors.forEach(err => err.innerText = "");
-
-  // Full Name
-  if (firstName.value.trim() === "") {
-    firstName.nextElementSibling.innerText = "Full name required";
+  if (name === "") {
+    nameError.textContent = "Full name is required";
     isValid = false;
   }
 
-  // Last Name
-  if (lastName.value.trim() === "") {
-    lastName.nextElementSibling.innerText = "Last name required";
+  if (!/^[0-9]{10}$/.test(phone)) {
+    phoneError.textContent = "Enter valid 10 digit phone number";
     isValid = false;
   }
 
-  // Phone (10 digit)
-  if (!/^[0-9]{10}$/.test(phone.value)) {
-    phone.nextElementSibling.innerText = "Enter valid 10 digit phone number";
+  if (!/^\s+@\s+\.\s+$/.text(email)) {
     isValid = false;
   }
 
-  // Email
-  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)) {
-    email.nextElementSibling.innerText = "Enter valid email address";
+  if (subject === "") {
+    subjectError.textContent = "Subject is required";
     isValid = false;
   }
 
-  // Subject
-  if (subject.value.trim() === "") {
-    subject.nextElementSibling.innerText = "Subject required";
+  if (message === "") {
+    messageError.textContent = "Message is required";
     isValid = false;
   }
 
-  // Message
-  if (message.value.trim().length < 10) {
-    message.nextElementSibling.innerText = "Message minimum 10 characters";
-    isValid = false;
-  }
-
-  // Final submit
   if (isValid) {
     alert("Form submitted successfully ✅");
     this.reset();
+  }
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const toggle = document.getElementById("menuToggle");
+  const nav = document.getElementById("navbar");
+
+  if (toggle && nav) {
+    toggle.addEventListener("click", () => {
+      nav.classList.toggle("active");
+    });
   }
 });

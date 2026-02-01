@@ -27,3 +27,14 @@ function signin() {
     alert("Invalid email or password");
   }
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+  const toggle = document.getElementById("menuToggle");
+  const nav = document.getElementById("navbar");
+
+  if (toggle && nav) {
+    toggle.addEventListener("click", () => {
+      nav.classList.toggle("active");
+    });
+  }
+});
